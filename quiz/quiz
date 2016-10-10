@@ -11,6 +11,11 @@ var mainPlayer = {
         alert("what class are you?" + message);
     }
 }
+var enemy = {
+    enemy1: "goblin",
+    enemy2: "troll",
+    enemy3: "dragon"
+}
 mainPlayer.name = prompt("what is your name?");
 mainPlayer.Class = prompt("what is your class? You can pick between wizard, adventurer, or travler.");
 mainPlayer.weapon = prompt("what is your weapon? You can pick between staff, sword, or cellphone.");
@@ -32,16 +37,19 @@ if (mainPlayer.Class === "travler") {
 alert("welcome");
 window.alert("You begin your adventurer with your friends. You find yourself walking in the woods when suddenly you find that a troll has taken your friends in the middle of the night. You have four choices.");
 window.prompt("What choice do you make? A, B, C, or D");
-if  ("choice A")   
 if  (mainPlayer.choice === "A") {
-    mainPlayer.choice = "You run away and leave your friends for dead. You survive your encounter with enemy2, but the troll eats your friends. So you loose.";
+    window.prompt("You run away and leave your friends for dead. You survive your encounter with the troll, but the troll eats your friends. So you loose.");
+    alert("You loose");
 }
-    if  ("choice B") 
 if (mainPlayer.choice === "B") {
-    mainPlayer.choice = "You fight the troll to free your friends. You manage to defeat the troll with your weapon, you save your friends, but the troll manage you injure you during your fight. You have 20 life left."
+     window.prompt("You fight the troll to free your friends. You manage to defeat the troll with your weapon, you save your friends, but the troll manage you injure you during your fight. You have 20 life left.");
+     alert("You win");
 }
-var enemy = {
-    enemy1: "goblin",
-    enemy2: "troll",
-    enemy3: "dragon"
+if (mainPlayer.choice === "C") {
+    window.prompt("You talk to the troll and try to make a deal with it to release your friends. In exchange for your friends you agree to give the troll some of your food.");
+    alert("You win");
+}
+if (mainPlayer.choice === "D") {
+    window.prompt("You do nothing, and the troll captures you and then he cooks all of you for his dinner.")
+    alert("You loose");
 }
