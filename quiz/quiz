@@ -37,6 +37,7 @@ if (mainPlayer.Class === "travler") {
 alert("welcome");
 window.alert("You begin your adventurer with your friends. You find yourself walking in the forest when suddenly you find that a troll has taken your friends in the middle of the night. You have four choices.")
 window.prompt("What choice do you make? A, B, C, or D");
+var enemy2;
 if  (mainPlayer.choice = "A") {
     window.prompt("You run away and leave your friends for dead. You survive your encounter with the troll, but the troll eats your friends. So you loose.");
     alert("You loose");
@@ -54,9 +55,18 @@ else (mainPlayer.choice = "D"); {
     alert("You loose");
 }
 var nextScenario = ["After your encounter with the troll your group is travling to their next destination. You arive in the desert. Your group is abmushed by goblins."]
-var enemy1
+var enemy1;
 window.alert("The goblins were on their way to their home when they spoted your group. goblins are gamblers, they love to pit people against each other when ever they can.")
 window.prompt("You have four choices. A, B, C, or D.")
 if (mainPlayer.choice = "A") {
-    window.prompt("")
+    window.prompt("You run away and leave your friends for dead. You survive your encounter with the goblins, but the goblins take you friends with them to have some fun. So you loose.");
+    alert("You loose");
+}
+else (mainPlayer.choice = "B"); {
+     window.prompt("You fight the goblins to free your friends. You manage to defeat the goblins with your weapon, you save your friends, but the goblins manage you injure you during your fight. You have 15 life left.");
+     alert("You win");
+}
+if (mainPlayer.choice = "C") {
+    window.prompt("You talk to the goblins and try to make a deal with them to release your friends. In exchange for your friends you agree to give the goblins some of better targets. You tell them where they can find trolls. They readly agree.");
+    alert("You win");
 }
