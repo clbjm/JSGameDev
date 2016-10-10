@@ -1,17 +1,45 @@
+window.alert("You are out on you'r regular morning walk, when you suddenly feel that something is different but you can't put your finger on it. You then realize that there is something different about your sourndings. There are no people around and a book shop that you pass on your morning walk everyday. You see a sign with Adventurers Wanted printed on it.")
+var beggingScenarios = ["You find yourself drawn into the shop. Where a old man greets you. He talk so fast that you cant get a word in edgewise, asking about the sign in the front window. He convinces you to come with him to sign up for a advenutre and had some people interview you. They answer all of your questions and you belive them."]
 var mainPlayer = {
     name: "name",
     life: "25",
-    weapon: "sword, bow and arrow, staff",
+    weapon: "sword, cellphone, staff",
     power: "10",
-    class: "wizard, adventurer, travler",
+    Class: "wizard, adventurer, travler",
+    choice: "A, B, C, D",
     messenger: function (message) {
         alert("what class are you?" + message);
     }
 }
 mainPlayer.name = prompt("what is your name?");
-mainPlayer.class = prompt("what is your class?");
-mainPlayer.weapon = prompt("what is your weapon?");
-alert("welcome + mainPlayer.name + mainPlayer.class" + "mainPlayer.weapon");
+mainPlayer.Class = prompt("what is your class? You can pick between wizard, adventurer, or travler.");
+mainPlayer.weapon = prompt("what is your weapon? You can pick between staff, sword, or cellphone.");
+
+if (!mainPlayer.name) {
+    mainPlayer.name = window.prompt("I dont know what to call you if you dont enter a name. If you don't answer, I will be forced to name you myself...Last chance. What is your name?");
+    window.alert("Well I did try to warn you. Gunther Piddles it is then.");
+    mainPlayer.name = "Gunther Piddles";
+}
+if (mainPlayer.Class === "wizard") {
+    mainPlayer.weapon = "staff";
+}
+if (mainPlayer.Class === "adventurer") {
+    mainPlayer.weapon = "sword";
+}
+if (mainPlayer.Class === "travler") {
+    mainPlayer.weapon = "cellphone"; 
+}
+alert("welcome");
+window.alert("You begin your adventurer with your friends. You find yourself walking in the woods when suddenly you find that a troll has taken your friends in the middle of the night. You have four choices.");
+window.prompt("What choice do you make? A, B, C, or D");
+if  ("choice A")   
+if  (mainPlayer.choice === "A") {
+    mainPlayer.choice = "You run away and leave your friends for dead. You survive your encounter with enemy2, but the troll eats your friends. So you loose.";
+}
+    if  ("choice B") 
+if (mainPlayer.choice === "B") {
+    mainPlayer.choice = "You fight the troll to free your friends. You manage to defeat the troll with your weapon, you save your friends, but the troll manage you injure you during your fight. You have 20 life left."
+}
 var enemy = {
     enemy1: "goblin",
     enemy2: "troll",
