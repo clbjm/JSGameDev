@@ -8,11 +8,11 @@ var mainPlayer = {
     Class: "wizard, adventurer, travler",
     choice: "A, B, C, D",
     messenger: function (message) {
-        alert("what class are you?" + message);
+        alert("what class are you?");
     }
 }
 var enemy = {
-    enemy1: "goblin",
+    enemy1: "goblins",
     enemy2: "troll",
     enemy3: "dragon"
 }
@@ -35,21 +35,28 @@ if (mainPlayer.Class === "travler") {
     mainPlayer.weapon = "cellphone"; 
 }
 alert("welcome");
-window.alert("You begin your adventurer with your friends. You find yourself walking in the woods when suddenly you find that a troll has taken your friends in the middle of the night. You have four choices.");
+window.alert("You begin your adventurer with your friends. You find yourself walking in the forest when suddenly you find that a troll has taken your friends in the middle of the night. You have four choices.")
 window.prompt("What choice do you make? A, B, C, or D");
-if  (mainPlayer.choice === "A") {
+if  (mainPlayer.choice = "A") {
     window.prompt("You run away and leave your friends for dead. You survive your encounter with the troll, but the troll eats your friends. So you loose.");
     alert("You loose");
 }
-if (mainPlayer.choice === "B") {
+else (mainPlayer.choice = "B"); {
      window.prompt("You fight the troll to free your friends. You manage to defeat the troll with your weapon, you save your friends, but the troll manage you injure you during your fight. You have 20 life left.");
      alert("You win");
 }
-if (mainPlayer.choice === "C") {
+if (mainPlayer.choice = "C") {
     window.prompt("You talk to the troll and try to make a deal with it to release your friends. In exchange for your friends you agree to give the troll some of your food.");
     alert("You win");
 }
-if (mainPlayer.choice === "D") {
-    window.prompt("You do nothing, and the troll captures you and then he cooks all of you for his dinner.")
+else (mainPlayer.choice = "D"); {
+   window.prompt("You do nothing, and the troll captures you and then he cooks all of you for his dinner.")
     alert("You loose");
+}
+var nextScenario = ["After your encounter with the troll your group is travling to their next destination. You arive in the desert. Your group is abmushed by goblins."]
+var enemy1
+window.alert("The goblins were on their way to their home when they spoted your group. goblins are gamblers, they love to pit people against each other when ever they can.")
+window.prompt("You have four choices. A, B, C, or D.")
+if (mainPlayer.choice = "A") {
+    window.prompt("")
 }
