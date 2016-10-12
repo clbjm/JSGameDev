@@ -53,31 +53,40 @@ switch (attack)
     alert ("the troll manage you injure you during your fight. You have 20 life left."),
 alert("win"):
     var TalkMsg1 = function (TalkMsg1)
-var talk = prompt(messages1.TalkMsg1).toLocaleLowerCase();
+{var talk = prompt(messages1.TalkMsg1).toLocaleLowerCase();
 console.log(talk);
 switch (talk) 
     {case (choice == "B"),
     console.log("User will Talk"),
     alert("In exchange for your friends you agree to give the troll some of your food."),
-     alert("win")
+     alert("win"):
      var DoNothingMsg1 = function (DoNothingMsg1)
-var DoNothing = prompt(messages1.DoNothingMsg1).toLocaleLowerCase();
+    {var DoNothing = prompt(messages1.DoNothingMsg1).toLocaleLowerCase();
 console.log(DoNothing);
-switch (DoNothing)
-    {case (choice == "C"),
-    console.log("User will Do Nothing"),
+switch (DoNothing) {
+    case value:(choice == "C")
+        console.log("User will Do Nothing"),
     alert("The troll captures you and then he cooks all of you for his dinner."),
     alert ("lose")
-    var runMsg = function (runMsg1),
- run = prompt(messages1.runMsg1).toLocaleLowerCase()
+        break;
+    default:("lose")
+        break;
+}
+    
+    var runMsg = function (runMsg1)
+ {run = prompt(messages1.runMsg1).toLocaleLowerCase();
 console.log(run)
-switch (run)
-    {case (choice == "D"),
-    console.log("User will Run"),
-    alert ("You survive your encounter with the troll, but the troll eats your friends. So you lose."),
-    alert("lose")
+if (run) 
+    if (choice == "D")
+    console.log("User will Run");
+    alert ("You survive your encounter with the troll, but the troll eats your friends. So you lose.")
+    alert("lose");
+}
     }
-
+}
+    }
+}
+    }
 
 var middleScenario = ["After your encounter with the troll your group is travling to their next destination. You arive in the desert. Your group is abmushed by goblins."]
 var enemy1
@@ -93,9 +102,9 @@ window.prompt("You have four choices. A, B, C, or D.")
 var runPrompt = function (runMsg2) {
 var run = prompt(messages2.runMsg2).toLocaleLowerCase();
 console.log(run);
-if (run) {
-    var choice = "A"
-    console.log("User will run");
+switch (run) {
+    case (choice == "A")
+    :console.log("User will run");
     alert ("You survive your encounter with the goblins, but the goblins take you friends with them to have some fun. So you loose.")
     }
 }
@@ -103,11 +112,10 @@ var AttackPrompt = function (AttackMsg2) {
 var attack = prompt(messages2.AttackMsg2).toLocaleLowerCase();
 console.log(attack);
 switch (attack) {
-    case "B":
-    case "attack":
-    console.log("User will attack");
+    case (choice == "B")
+    (choice == "attack")
+    :console.log("User will attack")
     alert ("You manage to defeat the goblins with your weapon, you save your friends, but the goblins manage you injure you during your fight. You have 15 life left.")
-    break;
     }
 }
 var TalkPrompt = function (TalkMsg2) {
@@ -118,7 +126,6 @@ switch (talk) {
     case "talk":
     console.log("User will talk");
     alert ("In exchange for your friends you agree to give the goblins some of better targets. You tell them where they can find trolls. They readly agree.")
-    break;
     }
 }
 var DoNothingPrompt = function (DoNothingMsg2) {
@@ -182,6 +189,3 @@ if (DoNothing) {
     alert("Sorry you picked the wrong answer")
 }
   var alternateEndingScenario = ["The true ending with the dragon is this. On their way to the dragon, they encounter a fairy who they thought was named Tinkerbell. The travler knows the story of Tinkerbell from his world. But this Tinkerbell is different from what he has read in the books. This Tinkerbell is the twin of the books version. This is Tinkerbell's identical twin, the evil twin. Her name is BadTink. And instead of making people fly and healing, BadTink has the ability of making anything she touches decay. That's why you neaver hear about the twin. And thats how the group truley defeated the dragon. They had BadTink touch the dragon, and he decayed."]
-
-
-//i need a while statment a Array and a ObjectConstrouctor
