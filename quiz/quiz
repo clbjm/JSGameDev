@@ -46,7 +46,7 @@ window.alert("You begin your adventurer with your friends. You find yourself wal
 window.prompt("What choice do you make? A, B, C, or D");
 var AttackMsg1 = function (AttackMsg1) {
 var attack = prompt(messages1.AttackMsg1).toLocaleLowerCase();
-console.log(attack)
+console.log(attack)//function or loops
 switch (attack) 
     {case (choice == "A"),
     console.log("User will Attack"),
