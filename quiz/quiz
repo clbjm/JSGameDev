@@ -76,18 +76,17 @@ switch (DoNothing) {
     var runMsg = function (runMsg1)
  {run = prompt(messages1.runMsg1).toLocaleLowerCase();
 console.log(run)
-if (run) 
-    if (choice == "D")
-    console.log("User will Run");
-    alert ("You survive your encounter with the troll, but the troll eats your friends. So you lose.")
-    alert("lose");
-}
-    }
-}
-    }
-}
-    }
+switch (run) 
+    {case (choice == "D"),
+    console.log("User will Run"),
+    alert ("You survive your encounter with the troll, but the troll eats your friends. So you lose."),
+    alert("lose")
 
+    }
+}
+    }
+}
+    }
 var middleScenario = ["After your encounter with the troll your group is travling to their next destination. You arive in the desert. Your group is abmushed by goblins."]
 var enemy1
 var messages2 = {
