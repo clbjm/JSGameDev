@@ -14,7 +14,7 @@ var mainPlayer = {
 var enemy = {
     enemy1: "goblins",
     enemy2: "troll",
-    enemy3: "dragon"
+    enemy3: "dragon",
 }
 mainPlayer.name = prompt("what is your name?");
 mainPlayer.Class = prompt("what is your class? You can pick between wizard, adventurer, or travler.");
@@ -41,52 +41,46 @@ var messages1 = {
     TalkMsg: "You talk to the troll and try to make a deal with it to release your friends.",
     DoNothingMsg: "You do nothing."
 }
+var enemy2
 window.alert("You begin your adventurer with your friends. You find yourself walking in the forest when suddenly you find that a troll has taken your friends in the middle of the night. You have four choices.")
 window.prompt("What choice do you make? A, B, C, or D");
 var AttackMsg1 = function (AttackMsg1) {
 var attack = prompt(messages1.AttackMsg1).toLocaleLowerCase();
-console.log(attack);
-if (attack) {
-    var choice = ("A")
-    if ("A")
-    console.log("User will Attack");
-    alert ("the troll manage you injure you during your fight. You have 20 life left.")
-    alert("win")
-    }
-}
-var TalkMsg1 = function (TalkMsg1) {
+console.log(attack)
+switch (attack) 
+    {case (choice == "A"),
+    console.log("User will Attack"),
+    alert ("the troll manage you injure you during your fight. You have 20 life left."),
+alert("win"):
+    var TalkMsg1 = function (TalkMsg1)
 var talk = prompt(messages1.TalkMsg1).toLocaleLowerCase();
 console.log(talk);
-switch (talk) {
-    case choice = "B":
-    case "Talk",
-    console.log("User will Talk"):
-    alert("In exchange for your friends you agree to give the troll some of your food.")
+switch (talk) 
+    {case (choice == "B"),
+    console.log("User will Talk"),
+    alert("In exchange for your friends you agree to give the troll some of your food."),
      alert("win")
-    }
-}
-var DoNothingMsg1 = function () {
+     var DoNothingMsg1 = function (DoNothingMsg1)
 var DoNothing = prompt(messages1.DoNothingMsg1).toLocaleLowerCase();
 console.log(DoNothing);
-if (DoNothing) {
-    var choice = "C"
-    console.log("User will Do Nothing");
-    alert("The troll captures you and then he cooks all of you for his dinner.")
+switch (DoNothing)
+    {case (choice == "C"),
+    console.log("User will Do Nothing"),
+    alert("The troll captures you and then he cooks all of you for his dinner."),
     alert ("lose")
+    var runMsg = function (runMsg1),
+ run = prompt(messages1.runMsg1).toLocaleLowerCase()
+console.log(run)
+switch (run)
+    {case (choice == "D"),
+    console.log("User will Run"),
+    alert ("You survive your encounter with the troll, but the troll eats your friends. So you lose."),
+    alert("lose")
     }
-}
-var runMsg = function (runMsg1) {
-var run = prompt(messages1.runMsg1).toLocaleLowerCase();
-console.log(run);
-if (run) {
-    var choice = "D"
-    console.log("User will Run");
-    alert ("You survive your encounter with the troll, but the troll eats your friends. So you lose.")
-    alert("lose");
-}
-}
+
+
 var middleScenario = ["After your encounter with the troll your group is travling to their next destination. You arive in the desert. Your group is abmushed by goblins."]
-var enemy1;
+var enemy1
 var messages2 = {
    runMsg2: "You run away and leave your friends for dead.",
    AttackMsg2: "You fight the goblins to free your friends.",
@@ -148,7 +142,7 @@ var messages3 = {
 alert("Supercalifragilisticexpialidocious has challenged every group to spell his name befroe they fight. He has been taught that to destroy your enemy, you must first learn how to spell their name. He has been unbeatable because his name is soo hard to spell.")
 window.prompt("You have four choices. A, B, C, or D.")
 var runPrompt = function (runMsg3) {
-var run = prompt(messages3.runMsg3).toLocaleLowerCase();
+var runMsg3 = prompt(messages3.runMsg3).toLocaleLowerCase();
 console.log(run);
 if (run) {
     var choice = "A"
