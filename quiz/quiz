@@ -6,7 +6,7 @@ var mainPlayer = {
     weapon: "sword, cellphone, staff",
     power: "10",
     Class: "wizard, adventurer, travler",
-    choice: "A, B, C, D",
+    choice: "a, b, c, d",
     messenger: function (message) {
         alert("what class are you?");
     }
@@ -21,8 +21,8 @@ mainPlayer.Class = prompt("what is your class? You can pick between wizard, adve
 mainPlayer.weapon = prompt("what is your weapon? You can pick between staff, sword, or cellphone.");
 
 if (!mainPlayer.name) {
-    mainPlayer.name = window.prompt("I dont know what to call you if you dont enter a name. If you don't answer, I will be forced to name you myself...Last chance. What is your name?");
-    window.alert("Well I did try to warn you. Gunther Piddles it is then.");
+}else{    mainPlayer.name = window.prompt("I dont know what to call you if you dont enter a name. If you don't answer, I will be forced to name you myself...Last chance. What is your name?");
+ window.alert("Well I did try to warn you. Gunther Piddles it is then.");
     mainPlayer.name = "Gunther Piddles";
 }
 if (mainPlayer.Class === "wizard") {
@@ -36,155 +36,124 @@ if (mainPlayer.Class === "travler") {
 }
 alert("welcome");
 var messages1 = { 
-    runMsg: "You run away and leave your friends for dead.",
-    AttackMsg: "You fight the troll to free your friends. You manage to defeat the troll with your weapon, you save your friends.",
-    TalkMsg: "You talk to the troll and try to make a deal with it to release your friends.",
-    DoNothingMsg: "You do nothing."
-}
-var enemy2
+    runMsg1: "a You run away and leave your friends for dead.",
+    AttackMsg1: "b You fight the troll to free your friends. You manage to defeat the troll with your weapon, you save your friends.",
+    TalkMsg1: "c You talk to the troll and try to make a deal with it to release your friends.",
+    DoNothingMsg1: "d You do nothing."
+};
+var options = "";
+var enemy2;
 window.alert("You begin your adventurer with your friends. You find yourself walking in the forest when suddenly you find that a troll has taken your friends in the middle of the night. You have four choices.")
-window.prompt("What choice do you make? A, B, C, or D");
-var AttackMsg1 = function (AttackMsg1) {
-var attack = prompt(messages1.AttackMsg1).toLocaleLowerCase();
-console.log(attack)//function or loops
-switch (attack) 
-    {case (choice == "A"),
-    console.log("User will Attack"),
-    alert ("the troll manage you injure you during your fight. You have 20 life left."),
-alert("win"):
-    var TalkMsg1 = function (TalkMsg1)
-{var talk = prompt(messages1.TalkMsg1).toLocaleLowerCase();
-console.log(talk);
-switch (talk) 
-    {case (choice == "B"),
-    console.log("User will Talk"),
-    alert("In exchange for your friends you agree to give the troll some of your food."),
-     alert("win"):
-     var DoNothingMsg1 = function (DoNothingMsg1)
-    {var DoNothing = prompt(messages1.DoNothingMsg1).toLocaleLowerCase();
-console.log(DoNothing);
-switch (DoNothing) {
-    case value:(choice == "C")
-        console.log("User will Do Nothing"),
-    alert("The troll captures you and then he cooks all of you for his dinner."),
-    alert ("lose")
-        break;
-    default:("lose")
-        break;
+for (message in messages1)
+{
+    options += messages1[message] + "\n";
 }
-    
-    var runMsg = function (runMsg1)
- {run = prompt(messages1.runMsg1).toLocaleLowerCase();
-console.log(run)
-switch (run) 
-    {case (choice == "D"),
-    console.log("User will Run"),
-    alert ("You survive your encounter with the troll, but the troll eats your friends. So you lose."),
-    alert("lose")
+var attack = window.prompt(options+ "What choice do you make? a, b, c, or d");
 
+  while (attack != "a" && attack != "b" && attack != "c" && attack != "d")
+  {
+      var attack = window.prompt("What choice do you make? a, b, c, or d");
+  }  
+    switch (attack) {
+        case ("a"):
+            console.log("User will Attack")
+            alert ("the troll manage you injure you during your fight. You have 20 life left.")
+            break;
+        case ("b"):
+            console.log("User will Talk")
+            alert("In exchange for your friends you agree to give the troll some of your food.")
+            break;
+        case ("c"):
+            console.log("User will Do Nothing")
+            alert("The troll captures you and then he cooks all of you for his dinner.")
+        break;
+        case ("d"):
+    console.log("User will Run")
+    alert ("You survive your encounter with the troll, but the troll eats your friends. So you lose.")
     }
-}
-    }
-}
-    }
+
+
 var middleScenario = ["After your encounter with the troll your group is travling to their next destination. You arive in the desert. Your group is abmushed by goblins."]
-var enemy1
+var enemy1;
 var messages2 = {
-   runMsg2: "You run away and leave your friends for dead.",
-   AttackMsg2: "You fight the goblins to free your friends.",
-   TalkMsg2: "You talk to the goblins and try to make a deal with them to release your friends.",
-   DoNothingMsg2: "You are so afraid of the goblins that you cant do anything.", 
+   runMsg2: "a You run away and leave your friends for dead.",
+   AttackMsg2: "b You fight the goblins to free your friends.",
+   TalkMsg2: "c You talk to the goblins and try to make a deal with them to release your friends.",
+   DoNothingMsg2: "d You are so afraid of the goblins that you cant do anything.", 
 }
 window.alert("The goblins were on their way to their home when they spoted your group. Goblins are gamblers, they love to pit people against each other when ever they can.")
-window.prompt("You have four choices. A, B, C, or D.")
+var options = "";
+for (message in messages2)
+{
+    options += messages2[message] + "\n";
+}
+var run = window.prompt(options+ "You have four choices. a, b, c, or d.");
 
-var runPrompt = function (runMsg2) {
-var run = prompt(messages2.runMsg2).toLocaleLowerCase();
-console.log(run);
-switch (run) {
-    case (choice == "A")
-    :console.log("User will run");
-    alert ("You survive your encounter with the goblins, but the goblins take you friends with them to have some fun. So you loose.")
-    }
+  while (run != "a" && run != "b" && run != "c" && run != "d")
+  {
+      var run = window.prompt("What choice do you make? a, b, c, or d");
+  }  
+    switch (run) {
+    case ("a"):
+    console.log("User will run")
+    alert("You survive your encounter with the goblins, but the goblins take you friends with them to have some fun. So you loose.")
+    break;
+        case ("b"):
+    console.log("User will attack")
+    alert("You manage to defeat the goblins with your weapon, you save your friends, but the goblins manage you injure you during your fight. You have 15 life left.")
+    break;
+        case ("c"):
+    console.log("User will talk")
+    alert("In exchange for your friends you agree to give the goblins some of better targets. You tell them where they can find trolls. They readly agree.")
+    break;
+        case ("d"):
+    console.log("User will do nothing")
+    alert("You watch as they catch all of you, you are forced to fight your friends in battles to the death.")
 }
-var AttackPrompt = function (AttackMsg2) {
-var attack = prompt(messages2.AttackMsg2).toLocaleLowerCase();
-console.log(attack);
-switch (attack) {
-    case (choice == "B")
-    (choice == "attack")
-    :console.log("User will attack")
-    alert ("You manage to defeat the goblins with your weapon, you save your friends, but the goblins manage you injure you during your fight. You have 15 life left.")
-    }
-}
-var TalkPrompt = function (TalkMsg2) {
-var talk = prompt(messages2.TalkMsg2).toLocaleLowerCase();
-console.log(talk);
-switch (talk) {
-    case "C":
-    case "talk":
-    console.log("User will talk");
-    alert ("In exchange for your friends you agree to give the goblins some of better targets. You tell them where they can find trolls. They readly agree.")
-    }
-}
-var DoNothingPrompt = function (DoNothingMsg2) {
-var DoNothing = prompt(messages2.DoNothingMsg2).toLocaleLowerCase();
-console.log(DoNothing);
-switch (DoNothing) {
-    case "D":
-    case "do nothing":
-    console.log("User will do nothing");
-    alert ("You watch as they catch all of you, you are forced to fight your friends in battles to the death.")
-    }
-}
+
 var EndScenario = ["after your encounter with the goblins and with your group saftly away from the desert. After months of travel and danger, your group finally arives at their final destination. The lair of the dragon named Supercalifragilisticexpialidocious. You search but all you can find are the bones of those who have tried before you. With every group who tries to fight the dragon. Before the battle begins he introduces his self. Nobody has ever been able to defeat Supercalifragilisticexpialidocious."]
-var enemy3
+var enemy3;
+var alert3 = {
+    runalert3:"You find that one of your group members is a master at spelling very difficult names.",
+    attackalert3:"the dragon is defeated, but your group barley survives the battle. You have 1 life left",
+    Talkalert3:"You find out that one of your members is exiclent at spelling. The dragon is soo suprized that someone got his name right that he gives your group all of his valuibles.",
+    DoNothingalert3:"Supercalifragilisticexpialidocious promptly eats you all while awaiting the person who can finally spell his name correctly."
+}
 var messages3 = {
-    runMsg3: "You run away and leave your friends for the dragon to chalenge to spell his name.",
-    AttackMsg3: "Your group attaks Supercalifragilisticexpialidocious.",
-    TalkMsg3: "You accept Supercalifragilisticexpialidocious challenge to spell his name.",
-    DoNothingMsg3: "Your group is so startled at the dragon challenge that none of the group can answer.",
+    runMsg3: "a You run away and leave your friends for the dragon to chalenge to spell his name.",
+    AttackMsg3: "b Your group attacks Supercalifragilisticexpialidocious.",
+    TalkMsg3: "c You accept Supercalifragilisticexpialidocious challenge to spell his name.",
+    DoNothingMsg3: "d Your group is so startled at the dragon challenge that none of the group can answer.",
 }
-alert("Supercalifragilisticexpialidocious has challenged every group to spell his name befroe they fight. He has been taught that to destroy your enemy, you must first learn how to spell their name. He has been unbeatable because his name is soo hard to spell.")
-window.prompt("You have four choices. A, B, C, or D.")
-var runPrompt = function (runMsg3) {
-var runMsg3 = prompt(messages3.runMsg3).toLocaleLowerCase();
-console.log(run);
-if (run) {
-    var choice = "A"
-    console.log("User will run");
-    alert ("You find that one of your group members is a master at spelling very difficult names.")
-    }
+window.alert("Supercalifragilisticexpialidocious has challenged every group to spell his name befroe they fight. He has been taught that to destroy your enemy, you must first learn how to spell their name. He has been unbeatable because his name is soo hard to spell.")
+var options = "";
+for (message in messages3)
+{
+    options += messages3[message] + "\n";
 }
-var AttackPrompt = function (AttackMsg3) {
-var attack = prompt(messages3.AttackMsg3).toLocaleLowerCase();
-console.log(attack);
-if (attack) {
-    var choice = "B"
-    console.log("User will Attack");
-    alert("the dragon is defeated, but your group barley survives the battle. You have 1 life left")
-}
-}
-var TalkPrompt = function (TalkMsg3) {
-var talk = prompt(messages3.TalkMsg3).toLocaleLowerCase();
-console.log(talk);
-if (talk) {
-    var choice = "C"
+var run = window.prompt(options+ "You have four choices. a, b, c, or d.")
+
+  while (run != "a" && run != "b" && run != "c" && run != "d")
+  {
+      var run = window.prompt("What choice do you make? a, b, c, or d");
+  }  
+ 
+switch (run) {
+    case("a"):
+    var runMsg3 = alert(messages3.runmessages3)
+    console.log("User will run")
+    break;
+        case("b"):
+      var attackalert3 = alert(alert3.attackalert3)
+    console.log("User will Attack")
+    break;
+        case("c"):
+        var Talkalert3 = alert(alert3.Talkalert3)
     console.log("User will Talk");
-    alert("You find out that one of your members is exiclent at spelling. The dragon is soo suprized that someone got his name right that he gives your group all of his valuibles.")
-}
-}
-var DoNothingPrompt = function (DoNothingMsg3) {
-var DoNothing = prompt(messages3.DoNothingMsg3).toLocaleLowerCase();
-console.log(DoNothing);
-if (DoNothing) {
-    var choice = "D"
+    break;
+        case("d"):
+        var DoNothingalert3 = alert(alert3.DoNothingalert3)
     console.log("User will DoNothing");
-    alert("Supercalifragilisticexpialidocious promptly eats you all while awaiting the person who can finally spell his name correctly.")
-}
-}
- {
-    console.log("You must start over again")
-    alert("Sorry you picked the wrong answer")
-}
-  var alternateEndingScenario = ["The true ending with the dragon is this. On their way to the dragon, they encounter a fairy who they thought was named Tinkerbell. The travler knows the story of Tinkerbell from his world. But this Tinkerbell is different from what he has read in the books. This Tinkerbell is the twin of the books version. This is Tinkerbell's identical twin, the evil twin. Her name is BadTink. And instead of making people fly and healing, BadTink has the ability of making anything she touches decay. That's why you neaver hear about the twin. And thats how the group truley defeated the dragon. They had BadTink touch the dragon, and he decayed."]
+    }
+
+ // var alternateEndingScenario = ["The true ending with the dragon is this. On their way to the dragon, they encounter a fairy who they thought was named Tinkerbell. The travler knows the story of Tinkerbell from his world. But this Tinkerbell is different from what he has read in the books. This Tinkerbell is the twin of the books version. This is Tinkerbell's identical twin, the evil twin. Her name is BadTink. And instead of making people fly and healing, BadTink has the ability of making anything she touches decay. That's why you neaver hear about the twin. And thats how the group truley defeated the dragon. They had BadTink touch the dragon, and he decayed."]
