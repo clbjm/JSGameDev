@@ -21,7 +21,7 @@ mainPlayer.Class = prompt("what is your class? You can pick between wizard, adve
 mainPlayer.weapon = prompt("what is your weapon? You can pick between staff, sword, or cellphone.");
 
 if (!mainPlayer.name) {
-}else{    mainPlayer.name = window.prompt("I dont know what to call you if you dont enter a name. If you don't answer, I will be forced to name you myself...Last chance. What is your name?");
+   mainPlayer.name = window.prompt("I dont know what to call you if you dont enter a name. If you don't answer, I will be forced to name you myself...Last chance. What is your name?");
  window.alert("Well I did try to warn you. Gunther Piddles it is then.");
     mainPlayer.name = "Gunther Piddles";
 }
@@ -32,14 +32,14 @@ if (mainPlayer.Class === "adventurer") {
     mainPlayer.weapon = "sword";
 }
 if (mainPlayer.Class === "travler") {
-    mainPlayer.weapon = "cellphone"; 
+}else{   mainPlayer.weapon = "cellphone"; 
 }
 alert("welcome");
 var messages1 = { 
-    runMsg1: "a You run away and leave your friends for dead.",
-    AttackMsg1: "b You fight the troll to free your friends. You manage to defeat the troll with your weapon, you save your friends.",
-    TalkMsg1: "c You talk to the troll and try to make a deal with it to release your friends.",
-    DoNothingMsg1: "d You do nothing."
+    AttackMsg1: "a You fight the troll to free your friends. You manage to defeat the troll with your weapon, you save your friends.",
+    TalkMsg1: "b You talk to the troll and try to make a deal with it to release your friends.",
+    DoNothingMsg1: "c You do nothing.",
+    runMsg1: "d You run away and leave your friends for dead.",
 };
 var options = "";
 var enemy2
