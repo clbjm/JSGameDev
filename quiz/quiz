@@ -11,10 +11,10 @@ var mainPlayer = {
         alert("what class are you?");
     }
 }
-function enemy() {
-    enemy1, "goblins"
-    enemy2, "troll"
-    enemy3, "dragon"
+var enemy = {
+    enemy1: "goblins",
+    enemy2: "troll",
+    enemy3: "dragon",
 }
 mainPlayer.name = prompt("what is your name?");
 mainPlayer.Class = prompt("what is your class? You can pick between wizard, adventurer, or travler.");
@@ -42,7 +42,7 @@ var messages1 = {
     DoNothingMsg1: "d You do nothing."
 };
 var options = "";
-var enemy2;
+var enemy2
 window.alert("You begin your adventurer with your friends. You find yourself walking in the forest when suddenly you find that a troll has taken your friends in the middle of the night. You have four choices.")
 for (message in messages1)
 {
@@ -74,7 +74,7 @@ var attack = window.prompt(options+ "What choice do you make? a, b, c, or d");
 
 
 var middleScenario = ["After your encounter with the troll your group is travling to their next destination. You arive in the desert. Your group is abmushed by goblins."]
-var enemy1;
+var enemy1
 var messages2 = {
    runMsg2: "a You run away and leave your friends for dead.",
    AttackMsg2: "b You fight the goblins to free your friends.",
@@ -112,9 +112,8 @@ var run = window.prompt(options+ "You have four choices. a, b, c, or d.");
 }
 
 var EndScenario = ["after your encounter with the goblins and with your group saftly away from the desert. After months of travel and danger, your group finally arives at their final destination. The lair of the dragon named Supercalifragilisticexpialidocious. You search but all you can find are the bones of those who have tried before you. With every group who tries to fight the dragon. Before the battle begins he introduces his self. Nobody has ever been able to defeat Supercalifragilisticexpialidocious."]
-var enemy3;
+var enemy3
 var alert3 = {
-    runalert3:"You find that one of your group members is a master at spelling very difficult names.",
     attackalert3:"the dragon is defeated, but your group barley survives the battle. You have 1 life left",
     Talkalert3:"You find out that one of your members is exiclent at spelling. The dragon is soo suprized that someone got his name right that he gives your group all of his valuibles.",
     DoNothingalert3:"Supercalifragilisticexpialidocious promptly eats you all while awaiting the person who can finally spell his name correctly."
@@ -140,7 +139,7 @@ var run = window.prompt(options+ "You have four choices. a, b, c, or d.")
  
 switch (run) {
     case("a"):
-    var runMsg3 = alert(messages3.runmessages3)
+    alert("You find that one of your group members is a master at spelling very difficult names."),
     console.log("User will run")
     break;
         case("b"):
