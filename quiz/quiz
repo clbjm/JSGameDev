@@ -11,10 +11,10 @@ var mainPlayer = {
         alert("what class are you?");
     }
 }
-var enemy = {
-    enemy1: "goblins",
-    enemy2: "troll",
-    enemy3: "dragon",
+function enemy() {
+    enemy1, "goblins"
+    enemy2, "troll"
+    enemy3, "dragon"
 }
 mainPlayer.name = prompt("what is your name?");
 mainPlayer.Class = prompt("what is your class? You can pick between wizard, adventurer, or travler.");
